@@ -11,10 +11,10 @@ import afterProcess
 
 #GVA.text_detection()
 
-APPKEY ="AIzaSyC90yKoswLGpPFMq0D0ni_n0Oh6Ty0fNqc"
+APPKEY =
 ENDPOINT_URL = "https://vision.googleapis.com/v1/images:annotate"
 RESULTS_DIR = "jsons"
-makedirs(RESULTS_DIR,exist_ok=True)
+os.makedirs(RESULTS_DIR,exist_ok=True)
 ROOT = "../tmp"
 
 pixel = 5
