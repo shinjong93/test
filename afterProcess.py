@@ -4,11 +4,10 @@ ROOT = "../result/"
 
 
 
-def process(input_path):
+def process(f):
         n1 = 0
         lines = []
-        with open(input_path, 'r+') as f:
-            while True:
+        while True:
                 line = f.readline()
                 if not line: break
                 for i in range(len(line)-1):
@@ -17,17 +16,17 @@ def process(input_path):
                     if line[i] == ':':
                         line = line[:i] + '=' + line[i+1:]
                 lines.append(line)
-            f.seek(0)
-            f.writelines(lines)
-            f.close()
+        f.seek(0)
+        f.writelines(lines)
+        f.close()
 
-        with open(input_path, 'a') as f:
-            while(n1 > 0):
-                f.write("\n}")
-                n1 -= 1
 
-        with open(input_path, 'r') as f:
-            while True:
-                line = f.readline()
-                if not line: break
-                print(line, end='')
+        while(n1 > 0):
+            f.write("\n}")
+            n1 -= 1
+
+
+        while True:
+            line = f.readline()
+            if not line: break
+            print(line, end='')
