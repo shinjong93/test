@@ -79,8 +79,8 @@ if __name__ == '__main__':
                     f.write(datatxt)
                 t = resp['textAnnotations'][0]
                 result.write(t['description'])
-        n1 = 0
-        lines = []
+    n1 = 0
+    lines = []
     with open(output_path, 'r+') as f:
         while True:
             line = f.readline()
