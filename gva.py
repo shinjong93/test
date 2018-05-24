@@ -1,5 +1,3 @@
-from sys import argv
-from os import makedirs
 import os
 from os.path import join, basename
 import json
@@ -80,4 +78,4 @@ if __name__ == '__main__':
                     f.write(datatxt)
                 t = resp['textAnnotations'][0]
                 result.write(t['description'])
-    afterProcess.process(output_path)
+    afterProcess.process(result)
