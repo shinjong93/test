@@ -79,10 +79,10 @@ if __name__ == '__main__':
                     f.write(datatxt)
                 t = resp['textAnnotations'][0]
                 result.write(t['description'])
-        n1 = 0
-        lines = []
-        with open(output_path, 'r+') as f:
-            while True:
+   n1 = 0
+   lines = []
+   with open(output_path, 'r+') as f:
+           while True:
                 line = f.readline()
                 if not line: break
                 for i in range(len(line) - 1):
@@ -95,12 +95,12 @@ if __name__ == '__main__':
             f.writelines(lines)
             f.close()
 
-        with open(output_path, 'a') as f:
-            while (n1 > 0):
-                f.write("\n}")
-                n1 -= 1
+  with open(output_path, 'a') as f:
+        while (n1 > 0):
+             f.write("\n}")
+             n1 -= 1
 
-        with open(output_path, 'r') as f:
+  with open(output_path, 'r') as f:
             while True:
                 line = f.readline()
                 if not line: break
